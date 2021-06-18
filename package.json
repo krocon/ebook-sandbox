@@ -1,0 +1,26 @@
+{
+  "name": "ebook-sandbox",
+  "version": "1.0.0",
+  "description": "Sandbox.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install",
+    "test": "mocha --exit",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krocon/ebook-sandbox.git"
+  },
+  "keywords": [
+    "node",
+    "ebook",
+    "docker"
+  ],
+  "author": "Marc Kronberg",
+  "license": "Apache-2.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
