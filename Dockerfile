@@ -1,18 +1,20 @@
-FROM node:alpine
-LABEL maintainer "Marc Kronberg <marc.kronberg@gui.expert>"
+FROM node:12.4.0-alpine as debug
 
-# Create app directory
-WORKDIR /usr/app
+WORKDIR /work/
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
+COPY ./src/package.json /work/package.json
 RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
+RUN npm install -g nodemon
 
-# Bundle app source
-COPY . .
+COPY ./src/ /work/src/
 
-CMD [ "node", "index.js" ]
+ENTRYPOINT [ "nodemon","--inspect=0.0.0.0","./src/server.js" ]
+
+FROM node:12.4.0-alpine as prod
+
+WORKDIR /work/
+COPY ./src/package.json /work/package.json
+RUN npm install
+COPY ./src/ /work/
+
+CMD node .
