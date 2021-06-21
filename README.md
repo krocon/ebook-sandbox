@@ -43,7 +43,7 @@ docker rm  1696e876866c
 ##############
 
 https://docs.docker.com/compose/gettingstarted/
-
+https://stackoverflow.com/questions/65792821/how-to-use-node-js-on-container-that-has-a-workdir-app-in-its-image-to-access
 ##############
 Working with Environment Variables in Node.js
 https://www.twilio.com/blog/working-with-environment-variables-in-node-js-html
