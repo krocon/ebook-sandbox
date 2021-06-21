@@ -39,3 +39,11 @@ curl -i localhost:49160
 docker ps
 docker stop 1696e876866c
 docker rm  1696e876866c
+
+##############
+
+https://docs.docker.com/compose/gettingstarted/
+
+##############
+Working with Environment Variables in Node.js
+https://www.twilio.com/blog/working-with-environment-variables-in-node-js-html
