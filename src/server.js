@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 const HOST = '0.0.0.0';
 const app = express();
 // const FOLDER = process.env.DEMOFOLDER || '.';
-const FOLDER = '/prometheus';
+const FOLDER = '/comic-dir';
 
 // print process.argv
 process.argv.forEach((val, index, array) => {
@@ -32,8 +32,8 @@ app.listen(PORT, HOST);
 console.log(`Running version 3 on http://${HOST}:${PORT}`);
 console.log('  cwd:', process.cwd())
 console.log(`  FOLDER: ${FOLDER}`);
-console.log(`  PORT: ${PORT}`);
-console.log(`  ` + fs.readdirSync(FOLDER));
+let sep = `\t  `;
+console.log(sep + fs.readdirSync(FOLDER).join('\n' + sep));
 
 
 

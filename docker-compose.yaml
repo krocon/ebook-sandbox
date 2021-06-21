@@ -5,11 +5,11 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - prometheus-data:/prometheus
+      - comic-directory:/comic-dir
 #    environment:
 #      DEMOFOLDER: "./node_modules"
 volumes:
-  prometheus-data:
+  comic-directory:
     driver: local
     driver_opts:
       o: bind
